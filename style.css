@@ -1,0 +1,14 @@
+.comment_area {
+  height: 400px;
+}
+a {
+  text-decoration: none;
+  color: blue;
+}
+a:hover {
+  text-decoration: underline;
+}
+.pagination_area {
+  display: inline-block;
+  cursor: pointer;
+}
