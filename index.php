@@ -35,8 +35,8 @@ $count_data = $db->prepare("SELECT COUNT(*) FROM pagination");
 $count_data->execute();
 $count_data = $count_data->fetch(PDO::FETCH_COLUMN);
 
-//3個ずつ表示する
-$pagination=3;
+//5個ずつ表示する
+$pagination=5;
 
 //ページごとのデータのヘッドのインデックス
 $page_per_data_head = $pagination*($page-1);
@@ -52,6 +52,7 @@ $comments->execute();
 $comments_list = $comments->fetchAll(PDO::FETCH_ASSOC);
 
 ?>
+    <!--コメント表示-->
     <div class="comment_area">
         <?php foreach ($comments_list as $comment) { ?>
         <p><?php echo $comment['comment'];  ?></p>
